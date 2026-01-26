@@ -5,7 +5,6 @@ import QtQuick.Layouts 1.16
 import QtGraphicalEffects 1.16
 import QtQuick.Shapes 1.16
 
-// 主窗口：全屏无框，Qt6.8原生ApplicationWindow
 ApplicationWindow {
     id: splashWindow
     width: Screen.desktopAvailableWidth
