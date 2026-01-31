@@ -1,0 +1,16 @@
+<RCC>
+    <qresource prefix="/res">
+        <file>res/audio/bgm.wav</file>
+        <file>res/audio/click.wav</file>
+        <file>res/audio/pieceDrop.wav</file>
+        <file>res/audio/win.wav</file>
+        <file>res/images/gameBack.png</file>
+    </qresource>
+    <qresource prefix="/qml">
+        <file>qml/view/GameView.qml</file>
+        <file>qml/view/MainMenuView.qml</file>
+        <file>qml/view/SettingsView.qml</file>
+        <file>qml/view/StoryView.qml</file>
+        <file>qml/Main.qml</file>
+    </qresource>
+</RCC>
