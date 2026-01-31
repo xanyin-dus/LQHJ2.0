@@ -3,7 +3,7 @@
     <img src="https://img.shields.io/badge/Qt6.8-blue.svg" alt="Qt Version">
     <img src="https://img.shields.io/badge/Language-C%2B%2B11%2B%2FQML-orange.svg" alt="Development Language">
     <img src="https://img.shields.io/badge/Build-CMake-green.svg" alt="Build Tool">
-    <img src="https://img.shields.io/badge/Version-Control-Git-red.svg" alt="Version Control">
+    <img src="https://img.shields.io/badge/Version%20Control-Git-red.svg" alt="Version Control">
     <p>基于Qt QML+C++混合开发的分层架构五子棋游戏，融合轻量剧情分支，支持模块化协同开发</p>
 </div>
 
