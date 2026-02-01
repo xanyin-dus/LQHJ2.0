@@ -8,15 +8,15 @@ set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
 set(CMAKE_AUTOUIC OFF)
 
-# 1. 查找Qt6模块（保持不变）
+# 1. 查找Qt6模块
 find_package(Qt6 6.8 REQUIRED COMPONENTS Core Quick Qml Multimedia Gui)
 
-# 2. 批量扫描src下的C++源文件（增加过滤，避免扫到无关文件）
+# 2. 批量扫描src下的C++源文件
 file(GLOB_RECURSE PROJECT_SOURCES
     ${CMAKE_SOURCE_DIR}/src/*.h
     ${CMAKE_SOURCE_DIR}/src/*.cpp
 )
-# 关键：过滤掉build目录下的文件（如果有的话）
+# 过滤掉build目录下的文件
 list(FILTER PROJECT_SOURCES EXCLUDE REGEX "${CMAKE_BINARY_DIR}/*")
 
 # 3. 声明可执行文件（只放入口文件和qrc，C++源文件移到qml模块里）
@@ -25,11 +25,11 @@ qt_add_executable(appLQHJ20
     qml.qrc               # 资源文件
 )
 
-# 4. 配置QML模块（核心改动：把C++源文件移到SOURCES里）
+# 4. 配置QML模块
 qt_add_qml_module(appLQHJ20
     URI LQHJ20
     VERSION 1.0
-    # QML文件（保持不变）
+    # QML文件
     QML_FILES
         qml/Main.qml
         qml/view/MainMenuView.qml
@@ -46,13 +46,13 @@ qt_add_qml_module(appLQHJ20
             src/data/ResourceManager.cpp
 )
 
-# 5. 包含路径（保持不变，目标名一致）
+# 5. 包含路径
 target_include_directories(appLQHJ20
     PUBLIC
         ${CMAKE_SOURCE_DIR}/src
 )
 
-# 6. 链接Qt库（保持不变）
+# 6. 链接Qt库
 target_link_libraries(appLQHJ20
     PRIVATE
         Qt6::Core
@@ -62,7 +62,7 @@ target_link_libraries(appLQHJ20
         Qt6::Gui
 )
 
-# 7. Qt6运行时部署（保持不变）
+# 7. Qt6运行部署
 if(QT_VERSION_MAJOR EQUAL 6)
     qt_finalize_executable(appLQHJ20)
 endif()

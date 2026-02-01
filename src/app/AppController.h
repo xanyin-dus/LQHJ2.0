@@ -6,7 +6,7 @@
 #include <QString>
 #include <QDebug>  // 用于打印全局导航/模块初始化日志
 
-// 项目内子模块头文件（对应game/story/data模块的核心类）
+// 项目内子模块头文件（对应game/story/data模块的类）
 #include "game/GameController.h"   // 游戏逻辑控制器（棋盘、回合、胜负）
 #include "story/StoryManager.h"   // 剧情管理控制器（加载、分支、触发）
 #include "data/SaveManager.h"     // 存档管理控制器（进度保存/读取）
@@ -15,7 +15,7 @@
  * @brief 全局应用控制器类
  * 核心职责：
  * 1. 作为QML与C++的通信桥梁，暴露子模块接口给QML调用；
- * 2. 管理游戏内所有核心子模块（Game/Story/Save）的生命周期；
+ * 2. 管理游戏内所有子模块（Game/Story/Save）的生命周期；
  * 3. 处理全局界面导航逻辑（主菜单→游戏→剧情→设置的切换）；
  * 4. 转发全局状态变化信号（如界面切换、模块初始化完成）。
  * 设计模式：单例模式（建议后续扩展，确保全局唯一实例），继承QObject支持Qt信号槽机制。
