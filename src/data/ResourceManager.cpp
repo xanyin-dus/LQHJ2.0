@@ -1,7 +1,6 @@
 ﻿#include "ResourceManager.h"
 #include <QDir>          // 用于处理资源路径
 #include <QStandardPaths> // 可选：处理跨平台资源路径
-#include "../story/Constants.h"
 #ifndef RESOURCE_ROOT
 #define RESOURCE_ROOT "./res"
 #endif
@@ -26,28 +25,18 @@
  * - 验证res目录是否存在，不存在则打印警告日志。
  *
  * @param parent 父对象指针（单例模式下默认传nullptr）
- */
  *
  *
 */
 ResourceManager::ResourceManager(QObject *parent)
     : QObject(parent)
-    , m_bgmPlayer(nullptr) // 先初始化指针为nullptr，避免野指针
     , m_bgmPlayer(nullptr)
 {
-    // 空实现：组员需按上述步骤补充代码
-}
 
-/**
- * @brief 单例实例获取函数实现
- * 原理：静态局部变量`inst`在第一次调用时初始化，生命周期贯穿整个程序，确保全局唯一。
- * 注意：C++11及以上标准中，静态局部变量的初始化是线程安全的，无需额外加锁。
- * @return ResourceManager& 全局唯一的资源管理器实例引用
- */
-ResourceManager& ResourceManager::instance()
+
+}
  ResourceManager & ResourceManager::instance()
 {
-    static ResourceManager inst; // 静态局部实例（仅初始化一次）
     static ResourceManager inst;
     return inst;
 }
@@ -96,7 +85,6 @@ QPixmap ResourceManager::getTexture(const QString& filename)
     // Step4：返回图片
     return pixmap;
     // 空实现：返回空图片，组员需按上述步骤补充代码
-    return QPixmap();
 }
 
 /**
@@ -121,8 +109,6 @@ QPixmap ResourceManager::getTexture(const QString& filename)
  */
 void ResourceManager::playSound(const QString& filename)
 {
-    // 空实现：组员需按上述步骤补充代码
-}
     if (m_soundCache.contains(filename))
     {
         QSoundEffect* sound = m_soundCache[filename];
@@ -160,7 +146,6 @@ void ResourceManager::playSound(const QString& filename)
 }
 void ResourceManager::playBGM(const QString& filename)
 {
-    // 空实现：组员需按上述步骤补充代码
     // 懒加载初始化播放器+播放列表
     if (m_bgmPlayer == nullptr) {
         m_bgmPlayer = new QMediaPlayer(this);
