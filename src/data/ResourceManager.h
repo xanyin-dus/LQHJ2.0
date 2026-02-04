@@ -1,7 +1,9 @@
 ﻿#pragma once
 #ifndef RESOURCEMANAGER_H
 #define RESOURCEMANAGER_H
-
+#include <QtMultimedia/QMediaPlayer>
+#include <QtMultimedia>
+#include <QtMultimedia/QSoundEffect>
 #include <QObject>
 #include <QMap>
 #include <QMediaPlayer>
@@ -30,6 +32,7 @@ public:
      * 调用方式：ResourceManager::instance().getTexture("xxx.png") / playSound("xxx.wav")
      * 注意：禁止通过构造函数创建实例，仅能通过此接口访问。
      */
+
     static ResourceManager& instance();
 
     /**
@@ -77,8 +80,7 @@ private:
      * @brief BGM播放器（负责长音频的播放、暂停、切换）
      * 说明：QMediaPlayer适合播放大体积、长时长的音频（如MP3），支持网络流和本地文件。
      */
-    QMediaPlayer* m_bgmPlayer;
-
+     QMediaPlayer* m_bgmPlayer;
     /**
      * @brief 音效资源缓存容器
      * Key：音效相对路径（如"click_btn.wav"）；Value：QSoundEffect音效对象指针
