@@ -24,7 +24,6 @@
 class GameController : public QObject
 {
     Q_OBJECT  // Qt 信号槽/属性系统必须的宏，不可删除
-
     // 暴露给 QML 的属性：QML 可直接绑定，属性变化时自动触发 NOTIFY 信号更新 UI
     /**
      * @brief 当前行动玩家的名称（如“黑方”“白方”）
@@ -114,7 +113,7 @@ public:
      */
     bool isGameOver() const { return m_isGameOver; }
 
-signals:
+signals://qt信号槽
     /**
      * @brief 回合切换信号（NOTIFY 信号）
      * 触发时机：调用 switchTurn() 后、startGame() 初始化回合后。
