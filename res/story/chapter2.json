@@ -1,0 +1,76 @@
+﻿{
+    "startFrame": "frame_001",
+    "frames": [
+        {
+            "id": "frame_001",
+            "speaker": "白石灵",
+            "text": "这局棋，无天元，无星位，无劫争，只有一枚黑子，一枚白子。你执黑，落子吧。",
+            "bgImage": "qrc:/res/images/bg_white_platform_simple.png",
+            "bgm": "qrc:/res/audio/calm.wav",
+            "defaultJumpTo": "frame_002",
+            "isFinalFrame": false
+        },
+        {
+            "id": "frame_002",
+            "speaker": "云逍",
+            "text": "只有两枚棋子……这算什么棋局？师父教的定式、收官，竟全无用武之地。",
+            "bgImage": "qrc:/res/images/bg_white_platform_simple.png",
+            "bgm": "qrc:/res/audio/calm.wav",
+            "defaultJumpTo": "frame_003",
+            "isFinalFrame": false
+        },
+        {
+            "id": "frame_003",
+            "speaker": "白石灵",
+            "text": "棋道本无定式，不过是人心自缚。你为何下棋？为赢？为名利？还是为那一点“想懂棋”的执念？",
+            "bgImage": "qrc:/res/images/bg_white_platform_simple.png",
+            "bgm": "qrc:/res/audio/calm.wav",
+            "defaultJumpTo": "frame_004",
+            "isFinalFrame": false
+        },
+        {
+            "id": "frame_004",
+            "speaker": "云逍",
+            "text": "赢……我从未赢过师父。名利？忘忧谷从无外人来。我只是……喜欢指尖触到棋子时的踏实，喜欢看着棋子在棋盘上生根，哪怕只是一步普通的落子。",
+            "bgImage": "qrc:/res/images/bg_white_platform_simple.png",
+            "bgm": "qrc:/res/audio/warm.wav",
+            "defaultJumpTo": "frame_005",
+            "isFinalFrame": false
+        },
+        {
+            "id": "frame_005",
+            "speaker": "旁白",
+            "text": "话音落时，云逍抬手，将黑子落在棋盘左下角——那不是棋道中的要位，却是他儿时第一次落子的位置。没有技巧，没有算计，只有纯粹的欢喜。",
+            "bgImage": "qrc:/res/images/bg_white_platform_move.png",
+            "bgm": "qrc:/res/audio/warm.wav",
+            "defaultJumpTo": "frame_006",
+            "isFinalFrame": false
+        },
+        {
+            "id": "frame_006",
+            "speaker": "白石灵",
+            "text": "落子无华，初心昭然。好，好一个“只为欢喜”的棋心。",
+            "bgImage": "qrc:/res/images/bg_white_platform_move.png",
+            "bgm": "qrc:/res/audio/warm.wav",
+            "defaultJumpTo": "frame_007",
+            "isFinalFrame": false
+        },
+        {
+            "id": "frame_007",
+            "speaker": "白石灵",
+            "text": "问心局过了。但幻境之中，不止有守序的棋灵，还有被困的执念，甚至……觊觎灵棋的邪祟。这枚黑灵棋，你要收好，它会引你去该去的地方。",
+            "bgImage": "qrc:/res/images/bg_white_platform_fade.png",
+            "bgm": "qrc:/res/audio/fade.wav",
+            "defaultJumpTo": "frame_008",
+            "isFinalFrame": false
+        },
+        {
+            "id": "frame_008",
+            "speaker": "旁白",
+            "text": "白石灵的身影渐渐淡去，苍冥棋台崩塌成漫天光点。云逍只觉脚下一空，再次坠落，耳边却传来江水拍岸的声音，还有一声苍老的叹息，混着棋子落盘的脆响。",
+            "bgImage": "qrc:/res/images/bg_river_ice.png",
+            "bgm": "qrc:/res/audio/river.wav",
+            "isFinalFrame": true
+        }
+    ]
+}

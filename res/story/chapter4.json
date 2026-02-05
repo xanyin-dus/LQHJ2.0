@@ -1,0 +1,130 @@
+﻿{
+    "startFrame": "frame_001",
+    "frames": [
+        {
+            "id": "frame_001",
+            "speaker": "血劫魔",
+            "text": "黑灵棋、白灵棋……竟被一个毛头小子集齐了。有趣，真是有趣。",
+            "bgImage": "qrc:/res/images/bg_blood_chess.png",
+            "bgm": "qrc:/res/audio/evil_intense.wav",
+            "defaultJumpTo": "frame_002",
+            "isFinalFrame": false
+        },
+        {
+            "id": "frame_002",
+            "speaker": "云逍",
+            "text": "你便是江老丈说的血劫魔？你想做什么？",
+            "bgImage": "qrc:/res/images/bg_blood_chess.png",
+            "bgm": "qrc:/res/audio/evil_intense.wav",
+            "defaultJumpTo": "frame_003",
+            "isFinalFrame": false
+        },
+        {
+            "id": "frame_003",
+            "speaker": "血劫魔",
+            "text": "做什么？自然是取你体内的棋魂，夺你手中的灵棋。不过，老夫也不是不讲理的人——若你愿意将灵棋交予我，我便放你出幻境，还能赐你绝世棋艺，如何？",
+            "bgImage": "qrc:/res/images/bg_blood_chess_offer.png",
+            "bgm": "qrc:/res/audio/evil_tempt.wav",
+            "options": [
+                {
+                    "text": "假意妥协，伺机偷袭",
+                    "jumpToID": "frame_004"
+                },
+                {
+                    "text": "严词拒绝，以灵棋对峙",
+                    "jumpToID": "frame_006"
+                }
+            ],
+            "isFinalFrame": false
+        },
+        {
+            "id": "frame_004",
+            "speaker": "云逍",
+            "text": "好，我把灵棋给你。但你要先放我出去。",
+            "bgImage": "qrc:/res/images/bg_blood_chess_trick.png",
+            "bgm": "qrc:/res/audio/tension.wav",
+            "defaultJumpTo": "frame_005",
+            "isFinalFrame": false
+        },
+        {
+            "id": "frame_005",
+            "speaker": "血劫魔",
+            "text": "小子，还想跟老夫耍花样？",
+            "bgImage": "qrc:/res/images/bg_blood_chess_attack.png",
+            "bgm": "qrc:/res/audio/fight.wav",
+            "defaultJumpTo": "frame_008",
+            "isFinalFrame": false
+        },
+        {
+            "id": "frame_006",
+            "speaker": "云逍",
+            "text": "灵棋是幻境的契，也是我的初心，绝不可能给你！",
+            "bgImage": "qrc:/res/images/bg_blood_chess_defend.png",
+            "bgm": "qrc:/res/audio/fight.wav",
+            "defaultJumpTo": "frame_007",
+            "isFinalFrame": false
+        },
+        {
+            "id": "frame_007",
+            "speaker": "血劫魔",
+            "text": "敬酒不吃吃罚酒！那老夫便亲自取你的棋魂！",
+            "bgImage": "qrc:/res/images/bg_blood_chess_attack.png",
+            "bgm": "qrc:/res/audio/fight.wav",
+            "defaultJumpTo": "frame_008",
+            "isFinalFrame": false
+        },
+        {
+            "id": "frame_008",
+            "speaker": "旁白",
+            "text": "血劫魔抬手一挥，无数血色棋子如利刃般射向云逍。黑灵棋与白灵棋同时浮起，在他身前结成一道黑白光幕。光幕震颤，云逍只觉胸口剧痛，却死死咬着牙，不肯后退一步。",
+            "bgImage": "qrc:/res/images/bg_blood_chess_shield.png",
+            "bgm": "qrc:/res/audio/fight_intense.wav",
+            "defaultJumpTo": "frame_009",
+            "isFinalFrame": false
+        },
+        {
+            "id": "frame_009",
+            "speaker": "白石灵",
+            "text": "凡人，守住初心！灵棋之力，源于你的棋心，而非棋子本身！",
+            "bgImage": "qrc:/res/images/bg_blood_chess_shield.png",
+            "bgm": "qrc:/res/audio/assist.wav",
+            "defaultJumpTo": "frame_010",
+            "isFinalFrame": false
+        },
+        {
+            "id": "frame_010",
+            "speaker": "旁白",
+            "text": "白石灵的声音如惊雷般炸响，云逍猛地清醒。他抬手握住灵棋，指尖的执念化作力量，黑白光幕骤然暴涨，将血色棋子尽数弹回。血劫魔吃了一惊，身影竟淡了几分。",
+            "bgImage": "qrc:/res/images/bg_blood_chess_counter.png",
+            "bgm": "qrc:/res/audio/counter.wav",
+            "defaultJumpTo": "frame_011",
+            "isFinalFrame": false
+        },
+        {
+            "id": "frame_011",
+            "speaker": "血劫魔",
+            "text": "该死……你的棋心竟如此坚韧！今日暂且放过你，待老夫恢复力量，必取你棋魂！",
+            "bgImage": "qrc:/res/images/bg_blood_mist_fade.png",
+            "bgm": "qrc:/res/audio/evil_flee.wav",
+            "defaultJumpTo": "frame_012",
+            "isFinalFrame": false
+        },
+        {
+            "id": "frame_012",
+            "speaker": "云逍",
+            "text": "呼……他走了？",
+            "bgImage": "qrc:/res/images/bg_illusion_ruins.png",
+            "bgm": "qrc:/res/audio/breath.wav",
+            "defaultJumpTo": "frame_013",
+            "isFinalFrame": false
+        },
+        {
+            "id": "frame_013",
+            "speaker": "旁白",
+            "text": "血雾散去，眼前是一片破败的棋台遗迹，中央立着一块石碑，刻着“棋心为钥，破境为途”八字。云逍握着两枚灵棋，望着石碑，忽然明白——这灵棋幻境，从来不是考验棋艺，而是考验人心。而他的幻境之路，才刚刚开始。",
+            "bgImage": "qrc:/res/images/bg_ruins_stele.png",
+            "bgm": "qrc:/res/audio/hope.wav",
+            "isFinalFrame": true
+        }
+    ]
+}

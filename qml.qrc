@@ -1,10 +1,11 @@
-<RCC>
-    <qresource prefix="/res">
+﻿<RCC>
+    <qresource prefix="/">
         <file>res/audio/bgm.wav</file>
         <file>res/audio/click.wav</file>
         <file>res/audio/pieceDrop.wav</file>
         <file>res/audio/win.wav</file>
         <file>res/images/gameBack.png</file>
+        <file>res/story/chapter1.json</file>
     </qresource>
     <qresource prefix="/qml">
         <file>qml/view/GameView.qml</file>

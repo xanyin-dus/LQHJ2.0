@@ -73,6 +73,19 @@ struct StoryFrame {
      * 示例：包含两个 StoryOption，分别对应“接受挑战”和“拒绝挑战”分支。
      */
     QList<StoryOption> options;
+
+
+    /**
+     * @brief 新增：是否为章节最终帧
+     * true：触发chapterFinished信号，结束当前剧情章节；false：可继续跳转
+     */
+    bool isFinalFrame = false;
+
+    /**
+     * @brief 新增：无选项时的默认跳转ID
+     * 当options为空时，调用next()会跳转到该ID；若为空则按帧ID顺序+1（备用方案）
+     */
+    QString defaultJumpTo;
 };
 
 #endif // STORYCHAPTER_H
