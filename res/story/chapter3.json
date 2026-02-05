@@ -1,0 +1,103 @@
+﻿{
+    "startFrame": "frame_001",
+    "frames": [
+        {
+            "id": "frame_001",
+            "speaker": "老叟",
+            "text": "又是一个入幻境的……小子，你会下棋吗？",
+            "bgImage": "qrc:/res/images/bg_cold_river.png",
+            "bgm": "qrc:/res/audio/sad.wav",
+            "defaultJumpTo": "frame_002",
+            "isFinalFrame": false
+        },
+        {
+            "id": "frame_002",
+            "speaker": "云逍",
+            "text": "晚辈略知一二。老丈可是被困在此处？",
+            "bgImage": "qrc:/res/images/bg_cold_river.png",
+            "bgm": "qrc:/res/audio/sad.wav",
+            "defaultJumpTo": "frame_003",
+            "isFinalFrame": false
+        },
+        {
+            "id": "frame_003",
+            "speaker": "江临叟",
+            "text": "老夫江临叟，前朝棋待诏。三十年前，与国手对弈于寒江，一步错棋，满盘皆输，不仅丢了御赐的棋笏，更丢了毕生棋名。这寒江幻境，便是我的执念所化。",
+            "bgImage": "qrc:/res/images/bg_cold_river_chess.png",
+            "bgm": "qrc:/res/audio/sad.wav",
+            "defaultJumpTo": "frame_004",
+            "isFinalFrame": false
+        },
+        {
+            "id": "frame_004",
+            "speaker": "江临叟",
+            "text": "你看这残局，便是当年那一步错棋的模样。若你能为我改一步棋，解了这憾，老夫便赠你一枚白灵棋，助你走得更远。",
+            "bgImage": "qrc:/res/images/bg_cold_river_endgame.png",
+            "bgm": "qrc:/res/audio/challenge.wav",
+            "options": [
+                {
+                    "text": "改那步“贪胜”的劫争，弃子保局",
+                    "jumpToID": "frame_005"
+                },
+                {
+                    "text": "改那步“怯战”的退守，抢攻天元",
+                    "jumpToID": "frame_007"
+                }
+            ],
+            "isFinalFrame": false
+        },
+        {
+            "id": "frame_005",
+            "speaker": "云逍",
+            "text": "老丈，当年你为了争那一枚劫子，丢了全局的防线。晚辈以为，不如弃了那枚劫子，退守星位，虽难赢，却也不至于满盘皆输。",
+            "bgImage": "qrc:/res/images/bg_cold_river_move1.png",
+            "bgm": "qrc:/res/audio/think.wav",
+            "defaultJumpTo": "frame_006",
+            "isFinalFrame": false
+        },
+        {
+            "id": "frame_006",
+            "speaker": "江临叟",
+            "text": "弃子……老夫当年怎就想不到？一生求胜，竟被“赢”字缚住了手脚。是啊，棋道无绝对的赢，只有无悔的落子。这执念，该散了。",
+            "bgImage": "qrc:/res/images/bg_cold_river_fade.png",
+            "bgm": "qrc:/res/audio/relief.wav",
+            "defaultJumpTo": "frame_009",
+            "isFinalFrame": false
+        },
+        {
+            "id": "frame_007",
+            "speaker": "云逍",
+            "text": "老丈，当年你退守太过，给了对手喘息之机。晚辈以为，不如弃了防线，抢攻天元，哪怕是孤注一掷，也胜过束手就擒。",
+            "bgImage": "qrc:/res/images/bg_cold_river_move2.png",
+            "bgm": "qrc:/res/audio/think.wav",
+            "defaultJumpTo": "frame_008",
+            "isFinalFrame": false
+        },
+        {
+            "id": "frame_008",
+            "speaker": "江临叟",
+            "text": "抢攻……老夫当年便是怕了输，才不敢放手一搏。原来，比输更可怕的，是连尝试的勇气都没有。这盘棋，老夫输得甘心，也醒得彻底。",
+            "bgImage": "qrc:/res/images/bg_cold_river_fade.png",
+            "bgm": "qrc:/res/audio/relief.wav",
+            "defaultJumpTo": "frame_009",
+            "isFinalFrame": false
+        },
+        {
+            "id": "frame_009",
+            "speaker": "江临叟",
+            "text": "小子，谢你解了老夫的执念。这枚白灵棋，是老夫当年的随身之物，与你的黑灵棋相生。还有一事要提醒你——幻境深处有血劫魔，他靠吞噬棋魂为生，你若遇到，千万小心。",
+            "bgImage": "qrc:/res/images/bg_cold_river_chess_gift.png",
+            "bgm": "qrc:/res/audio/relief.wav",
+            "defaultJumpTo": "frame_010",
+            "isFinalFrame": false
+        },
+        {
+            "id": "frame_010",
+            "speaker": "旁白",
+            "text": "江临叟化作一道白光，融入白灵棋中。寒江幻境的冰面碎裂，云逍被卷入一片血红的迷雾，耳边传来桀桀的怪笑，那笑声里，满是对棋魂的贪婪。",
+            "bgImage": "qrc:/res/images/bg_blood_mist.png",
+            "bgm": "qrc:/res/audio/evil.wav",
+            "isFinalFrame": true
+        }
+    ]
+}

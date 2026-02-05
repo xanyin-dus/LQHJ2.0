@@ -17,7 +17,7 @@ file(GLOB_RECURSE PROJECT_SOURCES
     ${CMAKE_SOURCE_DIR}/src/*.cpp
 )
 # 过滤掉build目录下的文件
-list(FILTER PROJECT_SOURCES EXCLUDE REGEX "${CMAKE_BINARY_DIR}/*")
+# list(FILTER PROJECT_SOURCES EXCLUDE REGEX "${CMAKE_BINARY_DIR}/*")
 
 # 3. 声明可执行文件（只放入口文件和qrc，C++源文件移到qml模块里）
 qt_add_executable(appLQHJ20
@@ -29,7 +29,7 @@ qt_add_executable(appLQHJ20
 qt_add_qml_module(appLQHJ20
     URI LQHJ20
     VERSION 1.0
-    # QML文件
+    # QML文件（只放QML）
     QML_FILES
         qml/Main.qml
         qml/view/MainMenuView.qml
@@ -39,11 +39,14 @@ qt_add_qml_module(appLQHJ20
         qml/components/ChessPiece.qml
         qml/components/CustomButton.qml
         qml/components/Dialog.qml
-    # 所有C++源文件放在这里（MOC会正确处理Q_OBJECT/Q_PROPERTY）
+    # 所有C++源文件（只放.h/.cpp，删掉多余的JSON和QML_FILES）
     SOURCES
         ${PROJECT_SOURCES}
         src/data/SaveManager.cpp
-            src/data/ResourceManager.cpp
+        src/data/ResourceManager.cpp
+        QML_FILES res/story/chapter2.json
+        QML_FILES res/story/chapter3.json
+        QML_FILES res/story/chapter4.json
 )
 
 # 5. 包含路径

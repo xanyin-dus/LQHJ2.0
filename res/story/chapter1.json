@@ -1,0 +1,85 @@
+﻿{
+    "startFrame": "frame_001",
+    "frames": [
+        {
+            "id": "frame_001",
+            "speaker": "旁白",
+            "text": "青崖山的岚气，总在暮春的午后漫过忘忧谷的古松。松针坠在石案上，和着黑白棋子的微凉，酿出三分清寂，七分悠然。云逍跪坐案前，指尖捻着一枚黑子，对着空棋盘发怔——这已是他第七日，对着天元位迟迟未落子。",
+            "bgImage": "qrc:/res/images/bg_wangyougu.png",
+            "bgm": "qrc:/res/audio/serene.wav",
+            "defaultJumpTo": "frame_002",
+            "isFinalFrame": false
+        },
+        {
+            "id": "frame_002",
+            "speaker": "云逍",
+            "text": "师父说，棋道如心道，落子无悔便是真。可我瞧这棋盘，空荡得像藏着万千沟壑，竟不知该从何处起手……",
+            "bgImage": "qrc:/res/images/bg_wangyougu.png",
+            "bgm": "qrc:/res/audio/serene.wav",
+            "defaultJumpTo": "frame_003",
+            "isFinalFrame": false
+        },
+        {
+            "id": "frame_003",
+            "speaker": "旁白",
+            "text": "话音未落，指尖的黑子忽然发烫。那热度不似凡火，倒像有活物在棋中搏动。云逍一惊，棋子脱手坠向棋盘，却未落在天元，反倒滚向石案缝隙——那里，一枚通体漆黑、刻着玄奥棋纹的灵棋，正幽幽泛着光。",
+            "bgImage": "qrc:/res/images/bg_wangyougu_chess.png",
+            "bgm": "qrc:/res/audio/mysterious.wav",
+            "defaultJumpTo": "frame_004",
+            "isFinalFrame": false
+        },
+        {
+            "id": "frame_004",
+            "speaker": "云逍",
+            "text": "这是……？师父从未提过谷中有这般棋子。",
+            "bgImage": "qrc:/res/images/bg_wangyougu_chess.png",
+            "bgm": "qrc:/res/audio/mysterious.wav",
+            "defaultJumpTo": "frame_005",
+            "isFinalFrame": false
+        },
+        {
+            "id": "frame_005",
+            "speaker": "旁白",
+            "text": "他伸手拾起灵棋，指尖刚触到棋面，棋盘上的黑白子竟自行浮起，如星子般旋转。岚气骤然翻涌，古松的影子扭曲成棋盘格纹，天地间只剩黑白二色。灵棋在云逍掌心震颤，一声清越的棋鸣穿透耳膜，他只觉眼前一黑，身体似被卷入无尽漩涡。",
+            "bgImage": "qrc:/res/images/bg_illusion_entrance.png",
+            "bgm": "qrc:/res/audio/illusion.wav",
+            "defaultJumpTo": "frame_006",
+            "isFinalFrame": false
+        },
+        {
+            "id": "frame_006",
+            "speaker": "白石灵",
+            "text": "凡人，竟能唤醒黑灵棋？你，是何人？",
+            "bgImage": "qrc:/res/images/bg_white_stone_platform.png",
+            "bgm": "qrc:/res/audio/cold.wav",
+            "defaultJumpTo": "frame_007",
+            "isFinalFrame": false
+        },
+        {
+            "id": "frame_007",
+            "speaker": "云逍",
+            "text": "我……我是忘忧谷的云逍，只是个棋童。此处是何地？你又是谁？",
+            "bgImage": "qrc:/res/images/bg_white_stone_platform.png",
+            "bgm": "qrc:/res/audio/cold.wav",
+            "defaultJumpTo": "frame_008",
+            "isFinalFrame": false
+        },
+        {
+            "id": "frame_008",
+            "speaker": "白石灵",
+            "text": "此处是灵棋幻境，我乃守境棋灵。黑灵棋择你为契，便算入了局。想出去？先过我这苍冥棋台的问心局吧。",
+            "bgImage": "qrc:/res/images/bg_chess_platform.png",
+            "bgm": "qrc:/res/audio/challenge.wav",
+            "isFinalFrame": false,
+            "defaultJumpTo": "frame_009"
+        },
+        {
+            "id": "frame_009",
+            "speaker": "旁白",
+            "text": "话音落下，白石灵抬手一挥，无数白石自虚空中落下，在苍冥棋台上布成一道极简的残局。棋台边缘，“忘忧”二字渐渐淡去，取而代之的，是“入局”二字，猩红如血。",
+            "bgImage": "qrc:/res/images/bg_chess_platform_endgame.png",
+            "bgm": "qrc:/res/audio/challenge.wav",
+            "isFinalFrame": true
+        }
+    ]
+}
