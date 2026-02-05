@@ -1,0 +1,13 @@
+# Qt 构建目录
+build/
+.qtcreator/
+CMakeLists.txt.user
+
+# 编译缓存
+*.o
+*.obj
+*.exe
+*.dll
+*.json
+cache-v2
+cmakeFiles-v1
