@@ -1,4 +1,4 @@
-﻿#include "Player.h"
+#include "Player.h"
 
 /**
  * @brief 默认构造函数实现
@@ -34,7 +34,8 @@ Player::Player(QString name, Config::PieceType color, Player::Type type)
  * 核心逻辑：检查玩家类型是否为AI_Easy或AI_Hard，只要满足其一则判定为AI玩家。
  * @return bool AI玩家判断结果。
  */
-bool Player::isAI() const {
+bool Player::isAI() const
+{
     return m_type == Type::AI_Easy || m_type == Type::AI_Hard;
 }
 
@@ -43,7 +44,8 @@ bool Player::isAI() const {
  * 直接返回私有成员m_name的值，确保数据只读性（外部无法修改名称）。
  * @return QString 玩家名称。
  */
-QString Player::name() const {
+QString Player::name() const
+{
     return m_name;
 }
 
@@ -52,6 +54,17 @@ QString Player::name() const {
  * 直接返回私有成员m_color的值，确保数据只读性（外部无法修改颜色）。
  * @return Config::PieceType 棋子颜色。
  */
-Config::PieceType Player::color() const {
+Config::PieceType Player::color() const
+{
     return m_color;
+}
+
+/**
+ * @brief 设置玩家类型实现
+ * 供 GameController 在不同游戏模式（人人 / 人机）下动态调整玩家身份。
+ * @param type 新的玩家类型
+ */
+void Player::setType(Player::Type type)
+{
+    m_type = type;
 }
