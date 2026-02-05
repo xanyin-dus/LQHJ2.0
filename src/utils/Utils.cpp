@@ -21,11 +21,31 @@
  */
 QPoint Utils::pixelToGrid(int mouseX, int mouseY)
 {
-    // 空实现：返回无效坐标，组员需按上述步骤补充代码
-    Q_UNUSED(mouseX);
-    Q_UNUSED(mouseY);
-    return QPoint(-1, -1);
+    // Step1：边界预处理，负数坐标直接返回无效
+    if (mouseX < 0 || mouseY < 0)
+    {
+        return QPoint(-1, -1);
+    }
+
+    // Step2：计算棋盘居中偏移量（适配QML通用800*800 GameView）
+    int boardTotalPix = Config::BOARD_SIZE * Config::CELL_SIZE;
+    int offsetX = (800 - boardTotalPix) / 2;
+    int offsetY = (800 - boardTotalPix) / 2;
+
+    // Step3：减去偏移量计算网格行列索引（整数除法自动取整，适配鼠标点击）
+    int col = (mouseX - offsetX) / Config::CELL_SIZE;
+    int row = (mouseY - offsetY) / Config::CELL_SIZE;
+
+    // Step4：网格索引边界校验，确保在0~14范围内
+    if (row < 0 || row >= Config::BOARD_SIZE || col < 0 || col >= Config::BOARD_SIZE)
+    {
+        return QPoint(-1, -1);
+    }
+
+    // Step5：返回有效网格坐标（x=列col，y=行row，和棋盘索引对应）
+    return QPoint(col, row);
 }
+
 
 /**
  * @brief 网格索引转像素坐标函数空实现
@@ -47,12 +67,24 @@ QPoint Utils::pixelToGrid(int mouseX, int mouseY)
  */
 QPoint Utils::gridToPixel(int row, int col)
 {
-    // 空实现：返回无效坐标，组员需按上述步骤补充代码
-    Q_UNUSED(row);
-    Q_UNUSED(col);
-    return QPoint(-1, -1);
-}
+    // Step1：网格索引边界校验，无效索引直接返回无效坐标
+    if (row < 0 || row >= Config::BOARD_SIZE || col < 0 || col >= Config::BOARD_SIZE)
+    {
+        return QPoint(-1, -1);
+    }
 
+    // Step2：计算棋盘居中偏移量（和pixelToGrid保持一致，避免坐标错位）
+    int boardTotalPix = Config::BOARD_SIZE * Config::CELL_SIZE;
+    int offsetX = (800 - boardTotalPix) / 2;
+    int offsetY = (800 - boardTotalPix) / 2;
+
+    // Step3：计算棋子中心点像素坐标（+CELL_SIZE/2 让棋子居中在格子里，UI更美观）
+    int pixelX = col * Config::CELL_SIZE + Config::CELL_SIZE / 2 + offsetX;
+    int pixelY = row * Config::CELL_SIZE + Config::CELL_SIZE / 2 + offsetY;
+
+    // Step4：返回有效中心点像素坐标（QML可直接用该坐标设置棋子x/y）
+    return QPoint(pixelX, pixelY);
+}
 /**
  * @brief 基础版日志函数实现（默认INFO级别）
  * 详细实现逻辑：
@@ -65,6 +97,7 @@ void Utils::log(const QString& module, const QString& message)
     // 调用重载函数，默认INFO级别
     Utils::log(module, message, "INFO");
 }
+
 
 /**
  * @brief 带级别的日志函数空实现（核心）
@@ -90,9 +123,29 @@ void Utils::log(const QString& module, const QString& message)
  */
 void Utils::log(const QString& module, const QString& message, const QString& level)
 {
-    // 空实现：组员需按上述步骤补充代码
-    Q_UNUSED(module);
-    Q_UNUSED(message);
-    Q_UNUSED(level);
-    // 示例：qInfo() << QString("[%1] [%2] [%3] %4").arg(QDateTime::currentDateTime().toString("yyyy-MM-dd hh:mm:ss")).arg(module).arg(level).arg(message);
+    // Step1：获取当前系统时间并格式化为 年-月-日 时:分:秒 格式
+    QDateTime currentTime = QDateTime::currentDateTime();
+    QString timeStr = currentTime.toString("yyyy-MM-dd hh:mm:ss");
+
+    // Step2：按固定格式拼接日志内容
+    QString logStr = QString("[%1] [%2] [%3] %4")
+                         .arg(timeStr)
+                         .arg(module)
+                         .arg(level)
+                         .arg(message);
+
+    // Step3：按日志级别输出
+    if (level == "ERROR")
+    {
+        qCritical() << logStr;
+    }
+    else if (level == "WARN")
+    {
+        qWarning() << logStr;
+    }
+    else
+    {
+        // 非ERROR/WARN都按INFO级别输出，提高容错性
+        qInfo() << logStr;
+    }
 }
