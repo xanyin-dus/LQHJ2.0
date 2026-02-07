@@ -1,4 +1,13 @@
-# 忽略编译目录
+# Qt 构建目录
 build/
-# 忽略 IDE 配置文件
-*.user
+.qtcreator/
+CMakeLists.txt.user
+
+# 编译缓存
+*.o
+*.obj
+*.exe
+*.dll
+*.json
+cache-v2
+cmakeFiles-v1
