@@ -3,7 +3,7 @@
 /**
  * @brief 构造函数实现：初始化子模块与全局状态
  * 实现步骤（组员需补充的逻辑）：
- * 1. 实例化三个子模块，将this作为父对象（利用Qt父子机制自动释放内存）；
+ * 1. 实例化三个核心子模块，将this作为父对象（利用Qt父子机制自动释放内存）；
  *    示例：m_gameCtrl = new GameController(this);
  * 2. 初始化子模块的默认状态（如SaveManager加载本地存档、StoryManager加载初始剧情配置）；
  * 3. 建立子模块间的信号槽关联（如GameController的gameOver信号触发StoryManager的nextChapter）；
@@ -24,7 +24,7 @@ AppController::AppController(QObject *parent)
 
 /**
  * @brief 全局导航函数空实现
- * 说明：
+ * 详细实现逻辑（组员需补充的核心步骤）：
  * Step1：合法性校验
  * - 判断viewName是否为空，或是否是支持的界面名称（可在utils/Constants.h中定义支持的界面列表）；
  * - 若不合法，打印警告日志（qWarning() << "Invalid view name:" << viewName;）并直接返回。

@@ -19,12 +19,7 @@ enum class GameState { Playing, BlackWin, WhiteWin, Draw };
 // 路径配置 (适配 qml.qrc)
 const QString IMG_PATH = "qrc:/res/images/";
 const QString AUDIO_PATH = "qrc:/res/audio/";
-
-const QString STORY_PATH = ":/res/story/"; // 剧情JSON文件根路径
-const QString STORY_IMAGE_PATH = "qrc:/res/res/images/story/"; // 剧情背景图路径
-const QString STORY_AUDIO_PATH = "qrc:/res/audio/story/"; // 剧情BGM/音效路径
+ const QString GAME_NAME = "LQHJ20";
 }
-
-
 
 #endif // CONSTANTS_H

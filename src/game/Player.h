@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 #ifndef PLAYER_H
 #define PLAYER_H
 
@@ -13,8 +13,7 @@
  * 3. 提供AI玩家判断接口，支持GameController区分人类与AI行动。
  * 设计特点：纯数据类（无业务逻辑）、成员变量私有（仅通过getter访问）、支持默认构造与带参构造，符合C++封装性原则。
  */
-class Player
-{
+class Player {
 public:
     /**
      * @brief 玩家类型枚举
@@ -62,17 +61,6 @@ public:
      * @note const修饰：函数不修改成员变量，仅做查询。
      */
     bool isAI() const;
-
-    /**
-     * @brief 设置玩家类型（人类 / 各难度 AI）
-     * 提供受控写接口，供 GameController 在不同模式下切换玩家类型。
-     */
-    void setType(Type type);
-
-    /**
-     * @brief 获取玩家当前类型
-     */
-    Type type() const { return m_type; }
 
 private:
     /**
