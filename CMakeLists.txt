@@ -9,7 +9,11 @@ set(CMAKE_AUTORCC ON)
 set(CMAKE_AUTOUIC OFF)
 
 # 1. 查找Qt6模块（保持不变）
-find_package(Qt6 6.8 REQUIRED COMPONENTS Core Quick Qml Multimedia Gui)
+find_package(Qt6 6.8 REQUIRED COMPONENTS
+    Core Gui Widgets Multimedia Quick Qml
+)
+
+
 
 # 2. 批量扫描src下的C++源文件（增加过滤，避免扫到无关文件）
 file(GLOB_RECURSE PROJECT_SOURCES
@@ -43,7 +47,7 @@ qt_add_qml_module(appLQHJ20
     SOURCES
         ${PROJECT_SOURCES}
         src/data/SaveManager.cpp
-            src/data/ResourceManager.cpp
+        src/data/ResourceManager.cpp
 )
 
 # 5. 包含路径（保持不变，目标名一致）
@@ -51,7 +55,6 @@ target_include_directories(appLQHJ20
     PUBLIC
         ${CMAKE_SOURCE_DIR}/src
 )
-
 # 6. 链接Qt库（保持不变）
 target_link_libraries(appLQHJ20
     PRIVATE
@@ -60,7 +63,8 @@ target_link_libraries(appLQHJ20
         Qt6::Qml
         Qt6::Multimedia
         Qt6::Gui
-)
+        Qt6::Widgets
+    )
 
 # 7. Qt6运行时部署（保持不变）
 if(QT_VERSION_MAJOR EQUAL 6)
