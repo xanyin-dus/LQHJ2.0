@@ -4,7 +4,7 @@
     <img src="https://img.shields.io/badge/Language-C%2B%2B11%2B%2FQML-orange.svg" alt="Development Language">
     <img src="https://img.shields.io/badge/Build-CMake-green.svg" alt="Build Tool">
     <img src="https://img.shields.io/badge/Version%20Control-Git-red.svg" alt="Version Control">
-    <p>🎮 基于Qt QML+C++开发，<strong>主分支为项目稳定发布版本</strong></p>
+    <p>🎮 基于Qt QML+C++开发，<strong>项目稳定发布版本</strong></p>
 </div>
 
 ---
